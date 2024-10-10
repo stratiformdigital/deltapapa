@@ -41,13 +41,15 @@ jobs:
           source /tmp/.profile
           nvm install
 
-      # - name: Test docs
-      #   run: |
-      #     source /tmp/.profile
-      #     nvm use
-      #     colima start
-      #     docker pull busybox
-      #     colima stop
+      - name: Test docs
+        run: |
+          source /tmp/.profile
+          nvm use
+          direnv allow
+          tfenv install
+          tgswitch
+          terragrunt -v
+          terraform -v
 
       # - name: Test install
       #   run: |
