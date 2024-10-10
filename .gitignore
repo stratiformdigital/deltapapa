@@ -1,0 +1,26 @@
+*.js
+!*config.js
+node_modules
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+cdk.context.json
+.turbo
+.yarn_install
+build_run
+.build_run
+
+# legacy ignores
+.serverless
+./src
+.env*
+!.envrc
+
+# tests
+coverage
+__snapshots__
+
+# other
+search*.jar
+*.zip
